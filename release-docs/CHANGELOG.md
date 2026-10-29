@@ -20,4 +20,4 @@
 
 ## Distribution status
 
-This public bootstrap beta is available for Apple Silicon Macs running macOS 13 or later. It is ad-hoc signed and not notarized, so the first launch may require an explicit approval through Finder or System Settings. Live checkout and license activation are not enabled yet.
+This public bootstrap beta is available for Apple Silicon Macs running macOS 13 or later. It is ad-hoc signed and not notarized, so the first launch may require an explicit approval through Finder or System Settings. The site presents the US$4.99 one-time FFideo Pro offer and five-export evaluation, but checkout stays disabled until the verified Lemon Squeezy public URL is configured. The post-purchase page documents manual license-key activation without claiming account, webhook, or key-import automation.

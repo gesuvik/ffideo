@@ -16,7 +16,16 @@
   document.querySelectorAll("[data-config-link]").forEach((link) => {
     const key = link.dataset.configLink;
     const value = config[key];
-    const unavailable = !value || placeholder.test(value);
+    let safeUrl = null;
+    if (typeof value === "string" && !placeholder.test(value)) {
+      try {
+        const parsed = new URL(value);
+        if (parsed.protocol === "https:") safeUrl = parsed.href;
+      } catch (_error) {
+        safeUrl = null;
+      }
+    }
+    const unavailable = !safeUrl;
 
     if (unavailable) {
       link.setAttribute("aria-disabled", "true");
@@ -37,9 +46,10 @@
       return;
     }
 
-    link.href = value;
+    link.href = safeUrl;
     if (key === "releaseZipUrl") link.setAttribute("download", "");
     link.removeAttribute("aria-disabled");
+    link.removeAttribute("tabindex");
   });
 
   const translations = {
@@ -67,7 +77,7 @@
       "proof.tools": "10 tools",
       "proof.toolsDetail": "without a timeline",
       "proof.price": "US$4.99",
-      "proof.priceDetail": "one-time, when checkout opens",
+      "proof.priceDetail": "one-time · five exports free",
       "preview.eyebrow": "The real app",
       "preview.title": "Ten direct actions. No timeline.",
       "preview.body": "This is the actual FFideo 1.0.0 menu running on macOS. The compact 380×540 interface stays one click away in the menu bar.",
@@ -116,9 +126,9 @@
       "install.link": "Read full install notes",
       "price.eyebrow": "Simple on purpose",
       "price.title": "One small tool. One small price.",
-      "price.body": "If checkout becomes available, FFideo Pro is planned at US$4.99 as a one-time purchase for FFideo 1.x. No subscription is promised or required.",
-      "price.cta": "Checkout — US$4.99",
-      "price.note": "Checkout is not live yet; the download includes five free exports.",
+      "price.body": "FFideo Pro is US$4.99 as a one-time purchase for FFideo 1.x. Try five successful exports free before activation. No subscription.",
+      "price.cta": "Buy Pro — US$4.99",
+      "price.note": "Five free exports are included. Checkout stays disabled until the verified Lemon Squeezy URL is configured.",
       "footer.tagline": "Express video work, in the menu bar.",
       "footer.privacy": "Privacy",
       "footer.eula": "EULA",
@@ -150,7 +160,7 @@
       "proof.tools": "10 herramientas",
       "proof.toolsDetail": "sin una línea de tiempo",
       "proof.price": "US$4.99",
-      "proof.priceDetail": "pago único, cuando abra el checkout",
+      "proof.priceDetail": "pago único · cinco exportaciones gratis",
       "preview.eyebrow": "La app real",
       "preview.title": "Diez acciones directas. Sin línea de tiempo.",
       "preview.body": "Este es el menú real de FFideo 1.0.0 ejecutándose en macOS. La interfaz compacta de 380×540 queda a un clic en la barra de menús.",
@@ -199,9 +209,9 @@
       "install.link": "Leer instrucciones completas",
       "price.eyebrow": "Simple a propósito",
       "price.title": "Una herramienta pequeña. Un precio pequeño.",
-      "price.body": "Si el checkout llega a estar disponible, FFideo Pro está previsto a US$4.99 como compra única para FFideo 1.x. No se promete ni se exige una suscripción.",
-      "price.cta": "Checkout — US$4.99",
-      "price.note": "El checkout aún no está activo; la descarga incluye cinco exportaciones gratis.",
+      "price.body": "FFideo Pro cuesta US$4.99 como compra única para FFideo 1.x. Prueba cinco exportaciones completadas gratis antes de activar. Sin suscripción.",
+      "price.cta": "Comprar Pro — US$4.99",
+      "price.note": "Incluye cinco exportaciones gratis. El checkout permanece deshabilitado hasta configurar la URL verificada de Lemon Squeezy.",
       "footer.tagline": "Trabajo de video exprés, desde la barra de menús.",
       "footer.privacy": "Privacidad",
       "footer.eula": "EULA",

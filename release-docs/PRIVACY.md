@@ -16,11 +16,13 @@ FFideo reads only files the user selects and writes converted results to the cho
 
 FFideo stores the number of successful evaluation exports and application preferences locally. Failed, cancelled, incompatible, or discarded conversions do not consume an evaluation export.
 
-## Purchase and activation
+## Purchase and checkout
 
-The local release candidate does not contact a payment or activation service. A future commercial build is expected to use Polar for checkout and license activation. When the user chooses those actions, Polar and ordinary internet infrastructure may process information such as payment/contact details, IP address, license key, product identifier, activation identifier, device-scoped information, and security logs under Polar's own notices and the final FFideo configuration.
+When the public checkout link is configured and used, FFideo purchases will use a Lemon Squeezy-hosted checkout. For those purchases, Lemon Squeezy acts as Merchant of Record for the checkout transaction and processes the order and payment under its own buyer terms and privacy notice.
 
-FFideo must not send media content, media filenames, or conversion history to Polar for licensing.
+The information Lemon Squeezy processes depends on the checkout and payment method. Its published privacy notice covers categories including contact, billing, transaction, device, browser, network, and support information. This static site does not collect payment-card details. The final store configuration will determine which order and license details Lemon Squeezy makes available to the FFideo operator.
+
+This site does not implement a customer account, webhook receiver, automatic license-key import, or automatic activation. FFideo must not send selected media, media filenames, or conversion history to Lemon Squeezy for checkout or licensing.
 
 ## Support
 
@@ -28,7 +30,7 @@ If a user contacts support, the operator may process the message, contact detail
 
 ## Sharing, retention, and rights
 
-FFideo does not sell personal data. Data may be handled by the approved payment/licensing provider, hosting provider, email provider, or authorities when legally required. The final policy must identify the operator, processors, international-transfer basis, retention periods, rights-request channel, and launch jurisdictions.
+The site includes no advertising or behavioral-analytics integration. Purchase information may be handled by Lemon Squeezy and its payment infrastructure; site delivery and support information may be handled by the hosting or email providers ultimately selected. The final policy must identify the operator, any additional processors, retention periods, rights-request channel, and launch jurisdictions.
 
 ## Children, security, and changes
 

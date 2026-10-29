@@ -452,6 +452,37 @@ h2,
 .document-content .back-link { display: inline-flex; gap: .5rem; margin-top: 2rem; font-size: .78rem; font-weight: 800; text-transform: uppercase; }
 .document-footer { width: min(calc(100% - 2rem), 920px); }
 
+/* Purchase success page */
+.purchase-hero h1 { max-width: 820px; }
+.purchase-content { max-width: 820px; }
+.purchase-steps {
+  margin: 1.4rem 0 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: purchase-step;
+  border-top: 1px solid var(--ink);
+}
+.purchase-steps li {
+  counter-increment: purchase-step;
+  display: grid;
+  grid-template-columns: 3rem 1fr;
+  gap: 1.2rem;
+  padding: 1.4rem 0;
+  border-bottom: 1px solid rgba(17, 37, 46, .28);
+}
+.purchase-steps li::before {
+  content: counter(purchase-step, decimal-leading-zero);
+  color: var(--orange);
+  font-family: var(--mono);
+  font-size: .72rem;
+  font-weight: 800;
+}
+.purchase-steps strong,
+.purchase-steps span { display: block; }
+.purchase-steps strong { color: var(--ink); font-family: var(--display); font-size: 1.35rem; font-weight: 600; }
+.purchase-steps span { margin-top: .3rem; color: var(--ink-soft); }
+.purchase-actions { display: flex; flex-wrap: wrap; gap: .8rem; margin: 1.5rem 0 .5rem; }
+
 @media (max-height: 700px) and (min-width: 901px) {
   .hero { padding: 2.25rem 0 1.75rem; }
   .hero h1 { font-size: clamp(3.8rem, 6.5vw, 5.4rem); }
@@ -507,6 +538,8 @@ h2,
   .price { font-size: 4.5rem; }
   .legal-hero { padding-top: 3.5rem; }
   .document-content { padding-top: 2.5rem; }
+  .purchase-actions { align-items: stretch; flex-direction: column; }
+  .purchase-actions .button { width: 100%; }
 }
 
 @media (prefers-reduced-motion: reduce) {

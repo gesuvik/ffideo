@@ -1,6 +1,6 @@
 /*
  * FFideo public link configuration.
- * Replace only these two placeholder values before publishing a live release.
+ * Replace checkoutUrl with the public Lemon Squeezy checkout/store URL before sale.
  * Keep this file free of secrets: everything here is public in the browser.
  */
 window.FFIDEO_CONFIG = Object.freeze({

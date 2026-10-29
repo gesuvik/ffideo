@@ -12,25 +12,23 @@ python3 -m http.server 4173 --bind 127.0.0.1
 
 Open `http://127.0.0.1:4173/`.
 
-Run the zero-dependency structural checks:
+Run the zero-dependency regression and structural checks:
 
 ```sh
+python3 -m unittest scripts/test_check_site.py -v
 python3 scripts/check_site.py
+python3 scripts/check_site.py --check-external
 ```
 
-## Public links
+The external mode requests every configured public HTTPS URL; use the structural command when working offline.
 
-All outbound product links are centralized in [`assets/config.js`](assets/config.js). The public GitHub release and ZIP URLs are pinned to `v1.0.0`; checkout intentionally remains disabled until the live payment and activation path is verified.
+## Public links and checkout preparation
 
-```js
-window.FFIDEO_CONFIG = Object.freeze({
-  releaseZipUrl: "https://github.com/gesuvik/ffideo/releases/download/v1.0.0/FFideo-1.0.0.zip",
-  releasePageUrl: "https://github.com/gesuvik/ffideo/releases/tag/v1.0.0",
-  checkoutUrl: "__CHECKOUT_URL__"
-});
-```
+All outbound product links are centralized in [`assets/config.js`](assets/config.js). The public GitHub release and ZIP URLs are pinned to `v1.0.0`. The single checkout value remains a public placeholder, so the purchase button is statically and dynamically disabled until a verified Lemon Squeezy checkout or store URL is supplied.
 
-Everything in this file is public browser configuration, never a secret.
+Only set `checkoutUrl` to the final public HTTPS URL. Do not put API keys, signing secrets, webhook secrets, or other private values in browser configuration.
+
+[`success.html`](success.html) is the manual post-purchase destination. It tells the buyer to retrieve and copy the issued license key from the Lemon Squeezy receipt email or My Orders, open FFideo, choose **Activate Pro**, and paste/activate the key. It does not parse checkout parameters, import keys, create accounts, receive webhooks, or claim automatic activation. Before enabling checkout, configure the Lemon Squeezy product to issue license keys, verify the receipt/My Orders flow, and configure the successful-purchase redirect only after the public site URL is final.
 
 ## GitHub Pages publishing instructions
 
@@ -69,6 +67,7 @@ The repository is prepared for the custom domain `ffideo.gesuvik.lol` through th
     https://ffideo.gesuvik.lol/privacy.html
     https://ffideo.gesuvik.lol/eula.html
     https://ffideo.gesuvik.lol/refunds.html
+    https://ffideo.gesuvik.lol/success.html
     ```
 
 GitHub may display a different Pages target for an organization repository. If so, use the exact target GitHub shows in **Settings → Pages** rather than guessing it.
@@ -85,6 +84,6 @@ The legal/install pages are rendered from the existing FFideo release drafts. Ex
 - `CHANGELOG.md`
 - `rollback.md`
 
-Those documents remain visibly marked provisional where the source says owner, legal, Merchant of Record, or publication approval is still required.
+Those documents remain visibly marked provisional where the source says owner, legal, Merchant of Record, store-configuration, or publication approval is still required. Lemon Squeezy is described only as the Merchant of Record and checkout processor; the site does not claim completed legal review or unimplemented commerce automation.
 
 The FFideo icon assets were copied from the FFideo application repository's `Resources/Branding` directory.
