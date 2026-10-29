@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Install and uninstall instructions for the FFideo 1.0.0 release candidate.">
+  <meta name="theme-color" content="#0d2c38">
+  <title>Install — FFideo</title>
+  <link rel="icon" href="assets/ffideo-menubar.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/styles.css">
+  <script src="assets/config.js" defer></script>
+  <script src="assets/site.js" defer></script>
+</head>
+<body class="document-body">
+  <a class="skip-link" href="#content">Skip to content</a>
+  <header class="site-header document-header">
+    <a class="brand" href="./"><img src="assets/ffideo-menubar.svg" width="22" height="22" alt=""><span>FFideo</span></a>
+    <nav class="nav-links" aria-label="Document navigation"><a href="privacy.html">Privacy</a><a href="eula.html">EULA</a><a href="refunds.html">Refunds</a><a href="install.html" aria-current="page">Install</a></nav>
+    <a class="text-link" href="./">Home →</a>
+  </header>
+  <main class="legal-main" id="content">
+    <section class="legal-hero">
+      <span class="document-label">FFideo 1.0.0 · release candidate</span>
+      <h1>Install FFideo</h1>
+      <p class="lede">The current artifact is ad-hoc signed and not notarized. Follow the manual trust step only if you intend to run this build.</p>
+      <p class="status-note"><strong>Disclosure:</strong> RC local only. Public distribution remains blocked until an approved trust path is chosen and verified. Do not disable Gatekeeper globally.</p>
+    </section>
+    <article class="document-content">
+      <h2>Before installing</h2>
+      <p>FFideo 1.0.0 requires macOS 13 or later and Apple Silicon. Verify <code>SHA256SUMS</code> from the release directory before opening the app.</p>
+
+      <h2>Install</h2>
+      <ol>
+        <li>Verify <code>SHA256SUMS</code> from the release directory.</li>
+        <li>Extract <code>FFideo-1.0.0.zip</code>.</li>
+        <li>Move <code>FFideo.app</code> to <code>/Applications</code> or another folder owned by the current user.</li>
+        <li>Launch FFideo.</li>
+      </ol>
+      <p>Enable <strong>Open at Login</strong> only after moving FFideo to its final location. This ad-hoc build uses a per-user LaunchAgent fallback when macOS does not expose the main app through <code>SMAppService</code>; if the app is moved later, launch it manually once so Launch Services sees its new location.</p>
+      <p>For a future non-notarized private beta, macOS may require an explicit owner-approved exception through <strong>System Settings → Privacy &amp; Security → Open Anyway</strong>. Do not disable Gatekeeper globally.</p>
+      <a class="button button-primary" id="download" href="#download" data-config-link="releaseZipUrl" data-pending-label="Coming soon" data-pending-message="The FFideo release download is not live yet."><span data-action-label>Download FFideo 1.0.0</span><span aria-hidden="true">↓</span></a>
+
+      <h2>Uninstall</h2>
+      <ol>
+        <li>Quit FFideo and wait for any active conversion to finish or cancel.</li>
+        <li>Delete <code>FFideo.app</code> from its installation location.</li>
+        <li>Empty Trash if desired.</li>
+      </ol>
+      <p>FFideo does not install system services, kernel extensions, privileged helpers, browser extensions, or background daemons.</p>
+      <p>A future activated build may keep trial or license state in the user's secure/local application storage. The final public uninstaller documentation must name the exact storage identifiers after the production license integration is approved. Deactivating this Mac before deletion is recommended when that feature is enabled.</p>
+      <p>Converted media files are user documents and are never removed by uninstalling the app.</p>
+
+      <a class="back-link" href="release-docs/INSTALL.md">View copied install source <span aria-hidden="true">→</span></a><br>
+      <a class="back-link" href="release-docs/UNINSTALL.md">View copied uninstall source <span aria-hidden="true">→</span></a>
+    </article>
+  </main>
+  <footer class="site-footer document-footer"><div class="footer-brand"><a class="brand" href="./"><img src="assets/ffideo-menubar.svg" width="22" height="22" alt=""><span>FFideo</span></a><p>Express video work, in the menu bar.</p></div><nav><a href="privacy.html">Privacy</a><a href="eula.html">EULA</a><a href="refunds.html">Refunds</a></nav><p class="copyright">© 2026 FFideo</p></footer>
+  <p class="sr-only" aria-live="polite" data-live-region></p>
+</body>
+</html>

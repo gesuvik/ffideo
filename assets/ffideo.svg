@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024" fill="none">
+  <title>FFideo</title>
+  <desc>Icono de FFideo: un carrete de cine de aluminio con una cinta de fettuccine dorada, sobre una base con degradado azul petróleo de esquinas continuas.</desc>
+  <defs>
+    <linearGradient id="tile" x1="180" y1="90" x2="820" y2="960" gradientUnits="userSpaceOnUse"><stop stop-color="#477F8D"/><stop offset=".48" stop-color="#2A586C"/><stop offset="1" stop-color="#142E45"/></linearGradient>
+    <linearGradient id="edge" x1="512" y1="64" x2="512" y2="960" gradientUnits="userSpaceOnUse"><stop stop-color="#B8DFE6" stop-opacity=".65"/><stop offset="1" stop-color="#0D2135" stop-opacity=".8"/></linearGradient>
+    <linearGradient id="rear" x1="-240" y1="-230" x2="190" y2="260" gradientUnits="userSpaceOnUse"><stop stop-color="#E7ECF0"/><stop offset=".48" stop-color="#9CA6AF"/><stop offset="1" stop-color="#626D77"/></linearGradient>
+    <linearGradient id="rim" x1="-220" y1="-240" x2="190" y2="260" gradientUnits="userSpaceOnUse"><stop stop-color="#FFFFFF"/><stop offset=".28" stop-color="#D8DFE4"/><stop offset=".65" stop-color="#7D8A96"/><stop offset="1" stop-color="#BAC4CC"/></linearGradient>
+    <linearGradient id="aluminum" x1="-185" y1="-240" x2="190" y2="265" gradientUnits="userSpaceOnUse"><stop stop-color="#F9FCFE"/><stop offset=".38" stop-color="#E0E7EC"/><stop offset=".73" stop-color="#B8C3CC"/><stop offset="1" stop-color="#95A3AF"/></linearGradient>
+    <linearGradient id="well" x1="0" y1="-245" x2="0" y2="245" gradientUnits="userSpaceOnUse"><stop stop-color="#35404B"/><stop offset="1" stop-color="#65717B"/></linearGradient>
+    <linearGradient id="coil" x1="-240" y1="0" x2="180" y2="50" gradientUnits="userSpaceOnUse"><stop stop-color="#C4882A"/><stop offset=".35" stop-color="#F6D480"/><stop offset="1" stop-color="#AC701D"/></linearGradient>
+    <linearGradient id="pasta" x1="290" y1="350" x2="490" y2="817" gradientUnits="userSpaceOnUse"><stop stop-color="#E3AA40"/><stop offset=".28" stop-color="#F8D682"/><stop offset=".57" stop-color="#F2C262"/><stop offset=".77" stop-color="#FFE2A0"/><stop offset="1" stop-color="#DEA340"/></linearGradient>
+    <linearGradient id="pastaEdge" x1="265" y1="450" x2="580" y2="835" gradientUnits="userSpaceOnUse"><stop stop-color="#C58A2B"/><stop offset=".6" stop-color="#D6A14A"/><stop offset="1" stop-color="#BC8126"/></linearGradient>
+    <linearGradient id="fold" x1="565" y1="779" x2="649" y2="721" gradientUnits="userSpaceOnUse"><stop stop-color="#D79A32"/><stop offset="1" stop-color="#FFE6A8"/></linearGradient>
+    <filter id="tileShadow" x="0" y="0" width="1024" height="1024" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feDropShadow dx="0" dy="14" stdDeviation="16" flood-color="#3C352B" flood-opacity=".16"/></filter>
+    <filter id="objectShadow" x="130" y="125" width="790" height="790" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feDropShadow dx="0" dy="20" stdDeviation="16" flood-color="#493D27" flood-opacity=".22"/></filter>
+    <filter id="ribbonShadow" x="150" y="220" width="670" height="690" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feDropShadow dx="3" dy="10" stdDeviation="6" flood-color="#6B491B" flood-opacity=".2"/></filter>
+    <!-- Five cutouts and the spindle are real openings in the front plate. -->
+    <mask id="plateCutouts" maskUnits="userSpaceOnUse" x="-280" y="-280" width="560" height="560">
+      <circle r="264" fill="white"/>
+      <g fill="black">
+        <circle cy="-157" r="60"/>
+        <circle cx="149.3" cy="-48.5" r="60"/>
+        <circle cx="92.3" cy="127" r="60"/>
+        <circle cx="-92.3" cy="127" r="60"/>
+        <circle cx="-149.3" cy="-48.5" r="60"/>
+        <circle r="26"/>
+      </g>
+    </mask>
+  </defs>
+  <!-- Continuous-corner macOS tile; exterior remains transparent. -->
+  <g id="background" filter="url(#tileShadow)">
+    <path d="M286 64H738C884 64 960 140 960 286V738C960 884 884 960 738 960H286C140 960 64 884 64 738V286C64 140 140 64 286 64Z" fill="url(#tile)"/>
+    <path d="M286 65H738C883 65 959 141 959 286V738C959 883 883 959 738 959H286C141 959 65 883 65 738V286C65 141 141 65 286 65Z" stroke="url(#edge)" stroke-width="2"/>
+  </g>
+  <g id="reel-and-fettuccine" filter="url(#objectShadow)">
+    <!-- Back flange and the warm edge of the wound noodle. -->
+    <g id="back-flange" transform="translate(521 431) rotate(13) scale(.87 1)">
+      <circle r="274" fill="url(#rear)"/>
+      <circle r="263" fill="#68737D" stroke="#F4F7F9" stroke-width="5"/>
+      <circle r="241" fill="url(#coil)"/>
+      <circle r="226" stroke="#A26B20" stroke-width="5" opacity=".5"/>
+      <circle r="211" stroke="#FFDF95" stroke-width="5" opacity=".7"/>
+    </g>
+    <!-- One broad, unperforated ribbon: the film is fettuccine. -->
+    <g id="fettuccine" filter="url(#ribbonShadow)">
+      <path d="M434 247C333 282 302 387 296 503C290 608 258 666 236 706C203 765 252 824 352 842C449 861 543 838 614 792L581 738C518 778 438 799 362 785C307 775 286 753 301 726C340 659 357 594 361 507C366 410 383 342 450 312Z" fill="url(#pastaEdge)"/>
+      <path d="M433 240C332 275 301 380 295 496C289 601 257 659 235 699C202 758 251 817 351 835C448 854 542 831 613 785L580 731C517 771 437 792 361 778C306 768 285 746 300 719C339 652 356 587 360 500C365 403 382 335 449 305Z" fill="url(#pasta)"/>
+      <path d="M425 253C338 289 311 387 305 496C300 606 268 666 245 708C218 758 262 805 354 823C444 840 527 820 597 779" stroke="#FFF0BF" stroke-width="5" stroke-linecap="round" opacity=".65"/>
+      <path d="M350 501C346 588 329 650 291 716" stroke="#BB7B20" stroke-width="3" stroke-linecap="round" opacity=".28"/>
+      <!-- A short upturned end gives the pasta its soft, edible fold. -->
+      <path d="M580 731C611 711 636 700 654 707L678 756C659 750 638 765 613 785Z" fill="url(#fold)"/>
+      <path d="M585 734C614 716 635 708 651 714" stroke="#FFF0BC" stroke-width="4" stroke-linecap="round" opacity=".8"/>
+      <path d="M654 707L678 756" stroke="#C38A30" stroke-width="3"/>
+    </g>
+    <!-- Slightly angled aluminum face, with a dark interior in each opening. -->
+    <g id="front-flange" transform="translate(597 441) rotate(13) scale(.87 1)">
+      <circle cy="7" r="274" fill="#6B7782"/>
+      <circle r="274" fill="url(#rim)"/>
+      <circle r="264" fill="url(#well)"/>
+      <g mask="url(#plateCutouts)">
+        <circle r="264" fill="url(#aluminum)"/>
+        <circle r="256" stroke="white" stroke-opacity=".52" stroke-width="2"/>
+      </g>
+      <g stroke="#F9FCFF" stroke-opacity=".65" stroke-width="3">
+        <circle cy="-157" r="60"/>
+        <circle cx="149.3" cy="-48.5" r="60"/>
+        <circle cx="92.3" cy="127" r="60"/>
+        <circle cx="-92.3" cy="127" r="60"/>
+        <circle cx="-149.3" cy="-48.5" r="60"/>
+      </g>
+      <circle r="42" fill="url(#rim)"/>
+      <circle r="28" fill="#4C5863" stroke="#F5F8FA" stroke-width="3"/>
+      <path d="M-18 7A21 21 0 0 1 14-16" stroke="#29333D" stroke-opacity=".45" stroke-width="5" stroke-linecap="round"/>
+      <path d="M-226-128A260 260 0 0 1 164-201" stroke="white" stroke-width="5" stroke-linecap="round" opacity=".8"/>
+    </g>
+  </g>
+</svg>

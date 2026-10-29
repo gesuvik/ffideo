@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="FFideo is a native macOS menu-bar express video editor with ten local tools. Your files stay on your Mac.">
+  <meta name="theme-color" content="#0d2c38">
+  <meta property="og:title" content="FFideo — Express video work, in the menu bar">
+  <meta property="og:description" content="Ten local video tools for Apple Silicon Macs. No cloud processing.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/ffideo.svg">
+  <title>FFideo — Express video work, in the menu bar</title>
+  <link rel="icon" href="assets/ffideo-menubar.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/styles.css">
+  <script src="assets/config.js" defer></script>
+  <script src="assets/site.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="page-shell">
+    <header class="site-header" aria-label="Primary">
+      <a class="brand" href="./" aria-label="FFideo home">
+        <img src="assets/ffideo-menubar.svg" width="22" height="22" alt="">
+        <span>FFideo</span>
+      </a>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="#tools" data-i18n="nav.tools">10 tools</a>
+        <a href="#local" data-i18n="nav.local">Local by design</a>
+        <a href="#install" data-i18n="nav.install">Install</a>
+        <a href="privacy.html" data-i18n="nav.terms">Terms</a>
+      </nav>
+      <div class="language-switcher" aria-label="Language">
+        <button type="button" data-language="en" aria-pressed="true">EN</button>
+        <span aria-hidden="true">/</span>
+        <button type="button" data-language="es" aria-pressed="false">ES</button>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow" data-i18n="hero.eyebrow">Native macOS menu-bar utility</p>
+          <h1 id="hero-title">
+            <span data-i18n="hero.titleA">Edit the video.</span>
+            <em data-i18n="hero.titleB">Skip the editor.</em>
+          </h1>
+          <p class="hero-lede" data-i18n="hero.lede">Ten focused video operations, one compact menu-bar app. Drop in a file, choose the result, and keep every frame on your Mac.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" id="download" href="#download" data-config-link="releaseZipUrl" data-pending-label="Coming soon" data-pending-message="The FFideo release download is not live yet.">
+              <span data-action-label data-i18n="hero.download">Download for Mac</span>
+              <span aria-hidden="true">↓</span>
+            </a>
+            <a class="button button-quiet" href="#price" data-i18n="hero.buy">Buy once — US$4.99</a>
+          </div>
+          <p class="requirements" data-i18n="hero.requirements">macOS 13+ · Apple Silicon · local processing</p>
+        </div>
+
+        <div class="hero-object" aria-label="Illustration of the FFideo menu-bar app">
+          <div class="signal-ring" aria-hidden="true"></div>
+          <img class="app-icon" src="assets/ffideo.svg" width="164" height="164" alt="FFideo app icon: an aluminum film reel with a golden fettuccine ribbon">
+          <div class="menu-popover">
+            <div class="menu-chrome">
+              <div class="menu-brand"><img src="assets/ffideo-menubar.svg" width="17" height="17" alt=""> FFideo</div>
+              <span class="local-tag" data-i18n="mock.local">LOCAL SESSION</span>
+            </div>
+            <p class="menu-question" data-i18n="mock.title">What should happen?</p>
+            <div class="file-route">
+              <span class="file-pill" data-i18n="mock.input">interview.mov</span>
+              <span class="route-line" aria-hidden="true"></span>
+              <span class="file-pill file-output" data-i18n="mock.output">interview — compact.mp4</span>
+            </div>
+            <div class="menu-status"><span aria-hidden="true"></span><b data-i18n="mock.status">Ready to save</b></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="proof-strip" aria-label="Key facts">
+        <div><strong data-i18n="proof.files">Your files</strong><span data-i18n="proof.filesDetail">never leave the Mac</span></div>
+        <div><strong data-i18n="proof.tools">10 tools</strong><span data-i18n="proof.toolsDetail">without a timeline</span></div>
+        <div><strong data-i18n="proof.price">US$4.99</strong><span data-i18n="proof.priceDetail">one-time, when checkout opens</span></div>
+      </section>
+
+      <section class="tools-section" id="tools" aria-labelledby="tools-title">
+        <div class="section-heading">
+          <p class="eyebrow" data-i18n="tools.eyebrow">A smaller surface area</p>
+          <h2 id="tools-title" data-i18n="tools.title">The ten things you reach for.</h2>
+          <p data-i18n="tools.intro">No project setup. No cloud queue. No sprawling timeline. FFideo turns common finishing jobs into direct, named actions.</p>
+        </div>
+        <ol class="tool-ledger">
+          <li><span class="tool-number">01</span><div><strong data-i18n="tool.1">Reduce File Size</strong><small data-i18n="tool.1d">Choose a maximum size.</small></div></li>
+          <li><span class="tool-number">02</span><div><strong data-i18n="tool.2">Convert to MP4</strong><small data-i18n="tool.2d">Create a widely usable H.264 file.</small></div></li>
+          <li><span class="tool-number">03</span><div><strong data-i18n="tool.3">Compress to 1080p</strong><small data-i18n="tool.3d">Downscale without upscaling smaller sources.</small></div></li>
+          <li><span class="tool-number">04</span><div><strong data-i18n="tool.4">Compress to 720p</strong><small data-i18n="tool.4d">Make a compact sharing copy.</small></div></li>
+          <li><span class="tool-number">05</span><div><strong data-i18n="tool.5">Trim Video</strong><small data-i18n="tool.5d">Keep only the selected range.</small></div></li>
+          <li><span class="tool-number">06</span><div><strong data-i18n="tool.6">Join Videos</strong><small data-i18n="tool.6d">Combine clips in your chosen order.</small></div></li>
+          <li><span class="tool-number">07</span><div><strong data-i18n="tool.7">Extract Audio as MP3</strong><small data-i18n="tool.7d">Save the primary audio track.</small></div></li>
+          <li><span class="tool-number">08</span><div><strong data-i18n="tool.8">Extract Audio as M4A</strong><small data-i18n="tool.8d">Save AAC audio in an M4A file.</small></div></li>
+          <li><span class="tool-number">09</span><div><strong data-i18n="tool.9">Remove Audio</strong><small data-i18n="tool.9d">Export a silent MP4.</small></div></li>
+          <li><span class="tool-number">10</span><div><strong data-i18n="tool.10">Remove Metadata</strong><small data-i18n="tool.10d">Remove metadata and additional tracks.</small></div></li>
+        </ol>
+      </section>
+
+      <section class="local-section" id="local" aria-labelledby="local-title">
+        <div class="local-copy">
+          <p class="eyebrow" data-i18n="local.eyebrow">Local means local</p>
+          <h2 id="local-title" data-i18n="local.title">A short path from file to result.</h2>
+          <p data-i18n="local.body">FFideo reads the media you select and writes the result to the local destination you choose. This release candidate includes no cloud processing, analytics, or advertising.</p>
+          <a class="text-link" href="privacy.html">Privacy details <span aria-hidden="true">→</span></a>
+        </div>
+        <ol class="local-flow">
+          <li><b>1</b><div><strong data-i18n="local.step1">Choose</strong><span data-i18n="local.step1d">Select a file on your Mac.</span></div></li>
+          <li><b>2</b><div><strong data-i18n="local.step2">Process</strong><span data-i18n="local.step2d">FFmpeg runs inside the app bundle.</span></div></li>
+          <li><b>3</b><div><strong data-i18n="local.step3">Verify</strong><span data-i18n="local.step3d">The output is checked before commit.</span></div></li>
+          <li><b>4</b><div><strong data-i18n="local.step4">Save</strong><span data-i18n="local.step4d">The result lands where you chose.</span></div></li>
+        </ol>
+      </section>
+
+      <section class="install-section" id="install" aria-labelledby="install-title">
+        <div class="warning-mark" aria-hidden="true">!</div>
+        <div class="install-copy">
+          <p class="eyebrow" data-i18n="install.eyebrow">Bootstrap release disclosure</p>
+          <h2 id="install-title" data-i18n="install.title">Not notarized. Install deliberately.</h2>
+          <p data-i18n="install.body">The current artifact is ad-hoc signed and not notarized. macOS may require an explicit exception for the first launch. Do not disable Gatekeeper globally.</p>
+        </div>
+        <ol class="install-steps">
+          <li data-i18n="install.one">Verify SHA256SUMS supplied with the release.</li>
+          <li data-i18n="install.two">Extract FFideo-1.0.0.zip.</li>
+          <li data-i18n="install.three">Move FFideo.app to Applications.</li>
+          <li data-i18n="install.four">Launch it. If macOS blocks it, open System Settings → Privacy &amp; Security → Open Anyway.</li>
+        </ol>
+        <a class="button button-dark" href="install.html" data-i18n="install.link">Read full install notes</a>
+      </section>
+
+      <section class="price-section" id="price" aria-labelledby="price-title">
+        <div>
+          <p class="eyebrow" data-i18n="price.eyebrow">Simple on purpose</p>
+          <h2 id="price-title" data-i18n="price.title">One small tool. One small price.</h2>
+          <p data-i18n="price.body">If checkout becomes available, FFideo Pro is planned at US$4.99 as a one-time purchase for FFideo 1.x. No subscription is promised or required.</p>
+        </div>
+        <div class="price-action">
+          <span class="price">$4<sup>.99</sup></span>
+          <a class="button button-primary" id="checkout" href="#checkout" data-config-link="checkoutUrl" data-pending-label="Coming soon" data-pending-message="FFideo checkout is not live yet.">
+            <span data-action-label data-i18n="price.cta">Checkout — US$4.99</span>
+            <span aria-hidden="true">↗</span>
+          </a>
+          <small data-i18n="price.note">Checkout is not live in this deploy candidate.</small>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-brand">
+        <a class="brand" href="./"><img src="assets/ffideo-menubar.svg" width="22" height="22" alt=""><span>FFideo</span></a>
+        <p data-i18n="footer.tagline">Express video work, in the menu bar.</p>
+      </div>
+      <nav aria-label="Legal and release documents">
+        <a href="privacy.html" data-i18n="footer.privacy">Privacy</a>
+        <a href="eula.html" data-i18n="footer.eula">EULA</a>
+        <a href="refunds.html" data-i18n="footer.refunds">Refunds</a>
+        <a href="install.html" data-i18n="footer.install">Install</a>
+        <a href="release-docs/CHANGELOG.md" data-i18n="footer.source">Release notes</a>
+      </nav>
+      <p class="copyright">© 2026 FFideo</p>
+    </footer>
+  </div>
+  <p class="sr-only" aria-live="polite" data-live-region></p>
+</body>
+</html>
