@@ -20,10 +20,10 @@
   </header>
   <main class="legal-main" id="content">
     <section class="legal-hero">
-      <span class="document-label">FFideo 1.0.0 · release candidate</span>
+      <span class="document-label">FFideo 1.0.0 · public bootstrap beta</span>
       <h1>Install FFideo</h1>
       <p class="lede">The current artifact is ad-hoc signed and not notarized. Follow the manual trust step only if you intend to run this build.</p>
-      <p class="status-note"><strong>Disclosure:</strong> RC local only. Public distribution remains blocked until an approved trust path is chosen and verified. Do not disable Gatekeeper globally.</p>
+      <p class="status-note"><strong>Disclosure:</strong> This public bootstrap beta is distributed without Apple notarization. macOS may require one explicit approval on first launch. Do not disable Gatekeeper globally.</p>
     </section>
     <article class="document-content">
       <h2>Before installing</h2>
@@ -37,7 +37,8 @@
         <li>Launch FFideo.</li>
       </ol>
       <p>Enable <strong>Open at Login</strong> only after moving FFideo to its final location. This ad-hoc build uses a per-user LaunchAgent fallback when macOS does not expose the main app through <code>SMAppService</code>; if the app is moved later, launch it manually once so Launch Services sees its new location.</p>
-      <p>For a future non-notarized private beta, macOS may require an explicit owner-approved exception through <strong>System Settings → Privacy &amp; Security → Open Anyway</strong>. Do not disable Gatekeeper globally.</p>
+      <p>If macOS blocks the first launch, open <strong>System Settings → Privacy &amp; Security</strong> and choose <strong>Open Anyway</strong>, or Control-click FFideo in Finder and choose <strong>Open</strong>. Do not disable Gatekeeper globally.</p>
+      <p id="release"><a class="text-link" href="#release" data-config-link="releasePageUrl">View checksums and all release files <span aria-hidden="true">→</span></a></p>
       <a class="button button-primary" id="download" href="#download" data-config-link="releaseZipUrl" data-pending-label="Coming soon" data-pending-message="The FFideo release download is not live yet."><span data-action-label>Download FFideo 1.0.0</span><span aria-hidden="true">↓</span></a>
 
       <h2>Uninstall</h2>

@@ -4,6 +4,7 @@
  * Keep this file free of secrets: everything here is public in the browser.
  */
 window.FFIDEO_CONFIG = Object.freeze({
-  releaseZipUrl: "__GITHUB_RELEASE_ZIP_URL__",
+  releaseZipUrl: "https://github.com/gesuvik/ffideo/releases/download/v1.0.0/FFideo-1.0.0.zip",
+  releasePageUrl: "https://github.com/gesuvik/ffideo/releases/tag/v1.0.0",
   checkoutUrl: "__CHECKOUT_URL__"
 });

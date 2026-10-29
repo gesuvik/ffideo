@@ -18,23 +18,19 @@ Run the zero-dependency structural checks:
 python3 scripts/check_site.py
 ```
 
-## Replace the two public link placeholders
+## Public links
 
-All outbound product links are centralized in [`assets/config.js`](assets/config.js):
+All outbound product links are centralized in [`assets/config.js`](assets/config.js). The public GitHub release and ZIP URLs are pinned to `v1.0.0`; checkout intentionally remains disabled until the live payment and activation path is verified.
 
 ```js
 window.FFIDEO_CONFIG = Object.freeze({
-  releaseZipUrl: "__GITHUB_RELEASE_ZIP_URL__",
+  releaseZipUrl: "https://github.com/gesuvik/ffideo/releases/download/v1.0.0/FFideo-1.0.0.zip",
+  releasePageUrl: "https://github.com/gesuvik/ffideo/releases/tag/v1.0.0",
   checkoutUrl: "__CHECKOUT_URL__"
 });
 ```
 
-Before making either action live, replace:
-
-- `__GITHUB_RELEASE_ZIP_URL__` with the final HTTPS GitHub Release ZIP URL.
-- `__CHECKOUT_URL__` with the final HTTPS checkout URL.
-
-These values are public browser configuration, **not secrets**. Until replaced, the buttons remain visible but announce that the destination is not live.
+Everything in this file is public browser configuration, never a secret.
 
 ## GitHub Pages publishing instructions
 

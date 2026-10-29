@@ -11,7 +11,9 @@ from urllib.parse import unquote, urlsplit
 ROOT = Path(__file__).resolve().parent.parent
 HTML_FILES = sorted(ROOT.glob("*.html"))
 EXPECTED_CNAME = "ffideo.gesuvik.lol"
-PLACEHOLDERS = {"__GITHUB_RELEASE_ZIP_URL__", "__CHECKOUT_URL__"}
+PLACEHOLDERS = {"__CHECKOUT_URL__"}
+RELEASE_ZIP_URL = "https://github.com/gesuvik/ffideo/releases/download/v1.0.0/FFideo-1.0.0.zip"
+RELEASE_PAGE_URL = "https://github.com/gesuvik/ffideo/releases/tag/v1.0.0"
 
 
 class ReferenceParser(HTMLParser):
@@ -80,6 +82,9 @@ def check() -> list[str]:
     for token in PLACEHOLDERS:
         if token not in config:
             errors.append(f"assets/config.js: missing centralized placeholder {token}")
+    for url in (RELEASE_ZIP_URL, RELEASE_PAGE_URL):
+        if url not in config:
+            errors.append(f"assets/config.js: missing expected public release URL {url}")
 
     for page in HTML_FILES:
         text = page.read_text(encoding="utf-8")

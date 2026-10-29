@@ -1,6 +1,6 @@
 # FFideo 1.0.0 — changelog
 
-> Local release-candidate notes. This build is not authorized for public distribution.
+> Public bootstrap beta. This build is ad-hoc signed, not notarized, and published with explicit Gatekeeper instructions.
 
 ## Added
 
@@ -20,4 +20,4 @@
 
 ## Distribution status
 
-Developer ID signing, Hardened Runtime, notarization, stapling, live Polar checkout/activation, brand clearance, and codec/legal decisions remain external launch gates.
+This public bootstrap beta is available for Apple Silicon Macs running macOS 13 or later. It is ad-hoc signed and not notarized, so the first launch may require an explicit approval through Finder or System Settings. Live checkout and license activation are not enabled yet.
